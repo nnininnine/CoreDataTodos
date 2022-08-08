@@ -6,10 +6,7 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
-
-public class Todo: NSManagedObject {
-
-}
+public class Todo: NSManagedObject {}

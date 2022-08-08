@@ -6,21 +6,16 @@
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
+public extension Todo {
+  @nonobjc class func fetchRequest() -> NSFetchRequest<Todo> {
+    return NSFetchRequest<Todo>(entityName: "Todo")
+  }
 
-extension Todo {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Todo> {
-        return NSFetchRequest<Todo>(entityName: "Todo")
-    }
-
-    @NSManaged public var name: String?
-    @NSManaged public var createdAt: Date?
-
+  @NSManaged var name: String?
+  @NSManaged var createdAt: Date?
 }
 
-extension Todo : Identifiable {
-
-}
+extension Todo: Identifiable {}
