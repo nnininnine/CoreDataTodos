@@ -92,14 +92,31 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     var content = cell.defaultContentConfiguration()
     content.text = vm.todos[indexPath.row].name
     cell.contentConfiguration = content
-    
+
     cell.selectionStyle = .none
 
     return cell
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print(indexPath)
+    let todo = vm.todos[indexPath.row]
+    let alert = UIAlertController(title: "Edit Todo", message: "Edit selected todo", preferredStyle: .alert)
+    alert.addTextField(configurationHandler: { textField in
+      textField.text = todo.name
+    })
+    alert.addAction(.init(title: "Cancel", style: .cancel))
+    alert.addAction(.init(title: "Update", style: .default, handler: { [weak self] _ in
+      guard let textField = alert.textFields?.first, let text = textField.text, !text.isEmpty else { return }
+
+      self?.vm.updateTodo(todo: todo, with: text)
+      self?.vm.getTodos()
+
+      DispatchQueue.main.async {
+        self?.tableView.reloadData()
+      }
+    }))
+
+    present(alert, animated: true)
   }
 }
 
