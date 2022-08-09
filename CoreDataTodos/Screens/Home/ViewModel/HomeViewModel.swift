@@ -17,6 +17,10 @@ class HomeViewModel {
 
   // MARK: - Init
 
+  init() {
+    getTodos()
+  }
+
   // MARK: - Methods
 
   func getTodos() {

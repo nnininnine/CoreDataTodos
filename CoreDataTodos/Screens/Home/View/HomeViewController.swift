@@ -45,6 +45,27 @@ class HomeViewController: UIViewController {
 
   func setupTableView() {
     view.addSubview(tableView)
+
+    tableView.delegate = self
+    tableView.dataSource = self
+  }
+}
+
+// MARK: - UITableViewDelegate, UITableViewDataSource
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return vm.todos.count
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellIdentifier, for: indexPath)
+
+    var content = cell.defaultContentConfiguration()
+    content.text = vm.todos[indexPath.row].name
+    cell.contentConfiguration = content
+
+    return cell
   }
 }
 
