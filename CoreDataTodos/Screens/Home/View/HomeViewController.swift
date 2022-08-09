@@ -38,9 +38,18 @@ class HomeViewController: UIViewController {
 
   func setup() {
     view.backgroundColor = .systemBackground
+
+    setupNavBar()
+    setupTableView()
+  }
+
+  func setupNavBar() {
     title = "Core Data Todos"
 
-    setupTableView()
+    // add create todo button
+    let button = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(onTapCreateTodo))
+
+    navigationItem.rightBarButtonItem = button
   }
 
   func setupTableView() {
@@ -48,6 +57,25 @@ class HomeViewController: UIViewController {
 
     tableView.delegate = self
     tableView.dataSource = self
+  }
+
+  @objc func onTapCreateTodo() {
+    print("show create todo alert")
+    let alert = UIAlertController(title: "New Todo", message: "Enter new todo", preferredStyle: .alert)
+    alert.addTextField()
+    alert.addAction(.init(title: "Cancel", style: .cancel))
+    alert.addAction(.init(title: "Create", style: .default, handler: { [weak self] _ in
+      guard let textField = alert.textFields?.first, let text = textField.text, !text.isEmpty else { return }
+
+      self?.vm.createTodo(with: text)
+      self?.vm.getTodos()
+
+      DispatchQueue.main.async {
+        self?.tableView.reloadData()
+      }
+    }))
+
+    present(alert, animated: true)
   }
 }
 
