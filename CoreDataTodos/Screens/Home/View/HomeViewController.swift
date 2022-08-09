@@ -92,8 +92,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     var content = cell.defaultContentConfiguration()
     content.text = vm.todos[indexPath.row].name
     cell.contentConfiguration = content
+    
+    cell.selectionStyle = .none
 
     return cell
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print(indexPath)
   }
 }
 
