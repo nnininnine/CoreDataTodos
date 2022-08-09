@@ -27,7 +27,17 @@ class HomeViewModel {
     }
   }
 
-  func createTodo(with name: String) {}
+  func createTodo(with name: String) {
+    let newTodo = Todo(context: context)
+    newTodo.name = name
+    newTodo.createdAt = Date()
+    
+    do {
+      try context.save()
+    } catch let e {
+      print(e)
+    }
+  }
 
   func deleteTodo(todo: Todo) {}
 
