@@ -31,7 +31,7 @@ class HomeViewModel {
     let newTodo = Todo(context: context)
     newTodo.name = name
     newTodo.createdAt = Date()
-    
+
     do {
       try context.save()
     } catch let e {
@@ -39,7 +39,23 @@ class HomeViewModel {
     }
   }
 
-  func deleteTodo(todo: Todo) {}
+  func deleteTodo(todo: Todo) {
+    context.delete(todo)
 
-  func updateTodo(todo: Todo) {}
+    do {
+      try context.save()
+    } catch let e {
+      print(e)
+    }
+  }
+
+  func updateTodo(todo: Todo, with name: String) {
+    todo.name = name
+
+    do {
+      try context.save()
+    } catch let e {
+      print(e)
+    }
+  }
 }
