@@ -13,6 +13,7 @@ class HomeViewModel {
 
   private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
   var todos: [Todo] = []
+  let cellIdentifier = "todoCell"
 
   // MARK: - Init
 

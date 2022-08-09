@@ -10,16 +10,42 @@ import UIKit
 class HomeViewController: UIViewController {
   // MARK: - Properties
 
+  private let vm: HomeViewModel = .init()
+
+  // MARK: - Subviews
+
+  private lazy var tableView: UITableView = {
+    let tableView: UITableView = .init()
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: vm.cellIdentifier)
+    return tableView
+  }()
+
   // MARK: - LifeCycles
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    view.backgroundColor = .systemBackground
-    title = "Core Data Todos"
+    setup()
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+
+    tableView.frame = view.bounds
   }
 
   // MARK: - Methods
+
+  func setup() {
+    view.backgroundColor = .systemBackground
+    title = "Core Data Todos"
+
+    setupTableView()
+  }
+
+  func setupTableView() {
+    view.addSubview(tableView)
+  }
 }
 
 // MARK: - Previews
