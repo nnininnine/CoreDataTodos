@@ -18,6 +18,7 @@
 		69EF951D28A0E4B6007561B7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF951C28A0E4B6007561B7 /* HomeViewController.swift */; };
 		69EF952628A37878007561B7 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952428A37878007561B7 /* User+CoreDataClass.swift */; };
 		69EF952728A37878007561B7 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952528A37878007561B7 /* User+CoreDataProperties.swift */; };
+		69EF952B28A378D6007561B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952A28A378D6007561B7 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		69EF951C28A0E4B6007561B7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		69EF952428A37878007561B7 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		69EF952528A37878007561B7 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		69EF952A28A378D6007561B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +152,17 @@
 		69EF952828A378A2007561B7 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				69EF952928A378CA007561B7 /* View */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		69EF952928A378CA007561B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69EF952A28A378D6007561B7 /* LoginViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 				69EF94F828A0E134007561B7 /* SceneDelegate.swift in Sources */,
 				69EF952628A37878007561B7 /* User+CoreDataClass.swift in Sources */,
 				69EF951528A0E240007561B7 /* Todo+CoreDataProperties.swift in Sources */,
+				69EF952B28A378D6007561B7 /* LoginViewController.swift in Sources */,
 				69EF952728A37878007561B7 /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
