@@ -12,10 +12,24 @@ class LoginViewController: UIViewController {
 
   // MARK: - Subviews
 
+  private lazy var loginButton: UIButton = {
+    let button: UIButton = .init(configuration: .plain())
+    button.configuration?.title = "Login"
+    button.configuration?.baseForegroundColor = .systemBackground
+    button.backgroundColor = .label
+    button.configuration?.contentInsets = .init(top: 8, leading: 36, bottom: 8, trailing: 36)
+    button.layer.cornerRadius = 8
+    return button
+  }()
+
   private lazy var stackView: UIStackView = {
-    let stackView: UIStackView = .init(frame: .zero)
+    let stackView: UIStackView = .init(arrangedSubviews: [loginButton])
+    stackView.axis = .vertical
+    stackView.spacing = 8
+    stackView.alignment = .center
     stackView.translatesAutoresizingMaskIntoConstraints = false
     stackView.backgroundColor = .red
+    stackView.sizeToFit()
     return stackView
   }()
 
@@ -41,7 +55,6 @@ class LoginViewController: UIViewController {
       stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
       stackView.widthAnchor.constraint(equalToConstant: view.bounds.width - 36),
-      stackView.heightAnchor.constraint(equalToConstant: 300)
     ]
 
     NSLayoutConstraint.activate(stackViewConstraints)
