@@ -55,6 +55,9 @@ class LoginViewController: UIViewController {
     view.backgroundColor = .systemBackground
     title = "Core Data Todos"
 
+    // setup login button
+    loginButton.addTarget(self, action: #selector(onTapLogin), for: .touchUpInside)
+
     applyConstraints()
   }
 
@@ -72,6 +75,10 @@ class LoginViewController: UIViewController {
 
     NSLayoutConstraint.activate(stackViewConstraints)
     NSLayoutConstraint.activate(usernameTextFieldConstraints)
+  }
+
+  @objc func onTapLogin() {
+    print("call login func")
   }
 }
 
