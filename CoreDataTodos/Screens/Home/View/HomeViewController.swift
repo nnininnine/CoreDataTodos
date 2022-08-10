@@ -118,6 +118,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     present(alert, animated: true)
   }
+
+  func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let todo = vm.todos[indexPath.row]
+    let delete = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, completionHandler in
+      self?.vm.deleteTodo(todo: todo)
+      self?.vm.getTodos()
+
+      DispatchQueue.main.async {
+        self?.tableView.reloadData()
+      }
+      completionHandler(true)
+    }
+
+    delete.backgroundColor = .red
+
+    let configuration = UISwipeActionsConfiguration(actions: [delete])
+
+    return configuration
+  }
 }
 
 // MARK: - Previews
