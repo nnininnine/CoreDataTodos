@@ -12,6 +12,14 @@ class LoginViewController: UIViewController {
 
   // MARK: - Subviews
 
+  private lazy var usernameTextField: UITextField = {
+    let textField: UITextField = .init(frame: .zero)
+    textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.borderStyle = .roundedRect
+    textField.placeholder = "Enter username"
+    return textField
+  }()
+
   private lazy var loginButton: UIButton = {
     let button: UIButton = .init(configuration: .plain())
     button.configuration?.title = "Login"
@@ -23,12 +31,11 @@ class LoginViewController: UIViewController {
   }()
 
   private lazy var stackView: UIStackView = {
-    let stackView: UIStackView = .init(arrangedSubviews: [loginButton])
+    let stackView: UIStackView = .init(arrangedSubviews: [usernameTextField, loginButton])
     stackView.axis = .vertical
-    stackView.spacing = 8
+    stackView.spacing = 12
     stackView.alignment = .center
     stackView.translatesAutoresizingMaskIntoConstraints = false
-    stackView.backgroundColor = .red
     stackView.sizeToFit()
     return stackView
   }()
@@ -46,6 +53,7 @@ class LoginViewController: UIViewController {
   func setup() {
     view.addSubview(stackView)
     view.backgroundColor = .systemBackground
+    title = "Core Data Todos"
 
     applyConstraints()
   }
@@ -53,11 +61,17 @@ class LoginViewController: UIViewController {
   func applyConstraints() {
     let stackViewConstraints = [
       stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-      stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -24),
       stackView.widthAnchor.constraint(equalToConstant: view.bounds.width - 36),
     ]
 
+    let usernameTextFieldConstraints = [
+      usernameTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+      usernameTextField.heightAnchor.constraint(equalToConstant: 44),
+    ]
+
     NSLayoutConstraint.activate(stackViewConstraints)
+    NSLayoutConstraint.activate(usernameTextFieldConstraints)
   }
 }
 
