@@ -12,15 +12,40 @@ class LoginViewController: UIViewController {
 
   // MARK: - Subviews
 
+  private lazy var stackView: UIStackView = {
+    let stackView: UIStackView = .init(frame: .zero)
+    stackView.translatesAutoresizingMaskIntoConstraints = false
+    stackView.backgroundColor = .red
+    return stackView
+  }()
+
   // MARK: - LifeCycles
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Do any additional setup after loading the view.
+    setup()
   }
 
   // MARK: - Methods
+
+  func setup() {
+    view.addSubview(stackView)
+    view.backgroundColor = .systemBackground
+
+    applyConstraints()
+  }
+
+  func applyConstraints() {
+    let stackViewConstraints = [
+      stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      stackView.widthAnchor.constraint(equalToConstant: view.bounds.width - 36),
+      stackView.heightAnchor.constraint(equalToConstant: 300)
+    ]
+
+    NSLayoutConstraint.activate(stackViewConstraints)
+  }
 }
 
 // MARK: - Previews
