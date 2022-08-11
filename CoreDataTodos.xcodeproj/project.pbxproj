@@ -19,9 +19,9 @@
 		69EF952B28A378D6007561B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952A28A378D6007561B7 /* LoginViewController.swift */; };
 		69EF953028A3AF89007561B7 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952C28A3AF89007561B7 /* Todo+CoreDataClass.swift */; };
 		69EF953128A3AF89007561B7 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952D28A3AF89007561B7 /* Todo+CoreDataProperties.swift */; };
-		69EF953628A3AFD5007561B7 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953428A3AFD5007561B7 /* Folder+CoreDataClass.swift */; };
-		69EF953728A3AFD5007561B7 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953528A3AFD5007561B7 /* Folder+CoreDataProperties.swift */; };
 		69EF953C28A3B17D007561B7 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953B28A3B17D007561B7 /* TodosViewController.swift */; };
+		69EF953F28A49F72007561B7 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953D28A49F72007561B7 /* Folder+CoreDataClass.swift */; };
+		69EF954028A49F72007561B7 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953E28A49F72007561B7 /* Folder+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +39,9 @@
 		69EF952A28A378D6007561B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69EF952C28A3AF89007561B7 /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		69EF952D28A3AF89007561B7 /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		69EF953428A3AFD5007561B7 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
-		69EF953528A3AFD5007561B7 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		69EF953B28A3B17D007561B7 /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
+		69EF953D28A49F72007561B7 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		69EF953E28A49F72007561B7 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +176,8 @@
 		69EF953828A3AFED007561B7 /* Folder */ = {
 			isa = PBXGroup;
 			children = (
-				69EF953428A3AFD5007561B7 /* Folder+CoreDataClass.swift */,
-				69EF953528A3AFD5007561B7 /* Folder+CoreDataProperties.swift */,
+				69EF953D28A49F72007561B7 /* Folder+CoreDataClass.swift */,
+				69EF953E28A49F72007561B7 /* Folder+CoreDataProperties.swift */,
 			);
 			path = Folder;
 			sourceTree = "<group>";
@@ -269,16 +269,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				69EF94F628A0E134007561B7 /* AppDelegate.swift in Sources */,
-				69EF953728A3AFD5007561B7 /* Folder+CoreDataProperties.swift in Sources */,
 				69EF951B28A0E4A2007561B7 /* HomeViewModel.swift in Sources */,
 				69EF951D28A0E4B6007561B7 /* HomeViewController.swift in Sources */,
 				69EF950028A0E134007561B7 /* CoreDataTodos.xcdatamodeld in Sources */,
 				69EF953C28A3B17D007561B7 /* TodosViewController.swift in Sources */,
+				69EF953F28A49F72007561B7 /* Folder+CoreDataClass.swift in Sources */,
 				69EF94F828A0E134007561B7 /* SceneDelegate.swift in Sources */,
+				69EF954028A49F72007561B7 /* Folder+CoreDataProperties.swift in Sources */,
 				69EF953028A3AF89007561B7 /* Todo+CoreDataClass.swift in Sources */,
 				69EF952628A37878007561B7 /* User+CoreDataClass.swift in Sources */,
 				69EF952B28A378D6007561B7 /* LoginViewController.swift in Sources */,
-				69EF953628A3AFD5007561B7 /* Folder+CoreDataClass.swift in Sources */,
 				69EF952728A37878007561B7 /* User+CoreDataProperties.swift in Sources */,
 				69EF953128A3AF89007561B7 /* Todo+CoreDataProperties.swift in Sources */,
 			);
