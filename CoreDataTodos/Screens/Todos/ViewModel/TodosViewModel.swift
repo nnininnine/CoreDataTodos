@@ -54,4 +54,27 @@ class TodosViewModel {
       print(e)
     }
   }
+  
+  func deleteTodo(todo: Todo) {
+    // remove from folder
+    folder.removeFromTodos(todo)
+    
+    context.delete(todo)
+
+    do {
+      try context.save()
+    } catch let e {
+      print(e)
+    }
+  }
+
+  func updateTodo(todo: Todo, with name: String) {
+    todo.name = name
+
+    do {
+      try context.save()
+    } catch let e {
+      print(e)
+    }
+  }
 }
