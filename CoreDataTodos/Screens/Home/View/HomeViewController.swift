@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
     title = "Core Data Todos"
 
     // add create todo button
-    let button = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(onTapCreateTodo))
+    let button = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(onTapCreateFolder))
 
     navigationItem.rightBarButtonItem = button
   }
@@ -59,7 +59,7 @@ class HomeViewController: UIViewController {
     tableView.dataSource = self
   }
 
-  @objc func onTapCreateTodo() {
+  @objc func onTapCreateFolder() {
     let alert = UIAlertController(title: "New Folder", message: "Enter new folder", preferredStyle: .alert)
     alert.addTextField()
     alert.addAction(.init(title: "Cancel", style: .cancel))
