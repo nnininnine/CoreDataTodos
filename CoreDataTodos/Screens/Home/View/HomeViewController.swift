@@ -98,6 +98,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let folder = vm.folders[indexPath.row]
+    let todosVC = TodosViewController(with: folder)
+    
+    navigationItem.backButtonTitle = folder.name
+    navigationController?.pushViewController(todosVC, animated: true)
+
 //    let folder = vm.folders[indexPath.row]
 //    let alert = UIAlertController(title: "Edit Folder", message: "Edit selected folder", preferredStyle: .alert)
 //    alert.addTextField(configurationHandler: { textField in
