@@ -60,15 +60,14 @@ class HomeViewController: UIViewController {
   }
 
   @objc func onTapCreateTodo() {
-    print("show create todo alert")
-    let alert = UIAlertController(title: "New Todo", message: "Enter new todo", preferredStyle: .alert)
+    let alert = UIAlertController(title: "New Folder", message: "Enter new folder", preferredStyle: .alert)
     alert.addTextField()
     alert.addAction(.init(title: "Cancel", style: .cancel))
     alert.addAction(.init(title: "Create", style: .default, handler: { [weak self] _ in
       guard let textField = alert.textFields?.first, let text = textField.text, !text.isEmpty else { return }
 
-      self?.vm.createTodo(with: text)
-      self?.vm.getTodos()
+      self?.vm.createFolder(with: text)
+      self?.vm.getFolders()
 
       DispatchQueue.main.async {
         self?.tableView.reloadData()
@@ -83,14 +82,14 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return vm.todos.count
+    return vm.folders.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: vm.cellIdentifier, for: indexPath)
 
     var content = cell.defaultContentConfiguration()
-    content.text = vm.todos[indexPath.row].name
+    content.text = vm.folders[indexPath.row].name
     cell.contentConfiguration = content
 
     cell.selectionStyle = .none
@@ -99,31 +98,31 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let todo = vm.todos[indexPath.row]
-    let alert = UIAlertController(title: "Edit Todo", message: "Edit selected todo", preferredStyle: .alert)
-    alert.addTextField(configurationHandler: { textField in
-      textField.text = todo.name
-    })
-    alert.addAction(.init(title: "Cancel", style: .cancel))
-    alert.addAction(.init(title: "Update", style: .default, handler: { [weak self] _ in
-      guard let textField = alert.textFields?.first, let text = textField.text, !text.isEmpty else { return }
-
-      self?.vm.updateTodo(todo: todo, with: text)
-      self?.vm.getTodos()
-
-      DispatchQueue.main.async {
-        self?.tableView.reloadData()
-      }
-    }))
-
-    present(alert, animated: true)
+//    let folder = vm.folders[indexPath.row]
+//    let alert = UIAlertController(title: "Edit Folder", message: "Edit selected folder", preferredStyle: .alert)
+//    alert.addTextField(configurationHandler: { textField in
+//      textField.text = folder.name
+//    })
+//    alert.addAction(.init(title: "Cancel", style: .cancel))
+//    alert.addAction(.init(title: "Update", style: .default, handler: { [weak self] _ in
+//      guard let textField = alert.textFields?.first, let text = textField.text, !text.isEmpty else { return }
+//
+//      self?.vm.updateFolder(folder: folder, with: text)
+//      self?.vm.getFolders()
+//
+//      DispatchQueue.main.async {
+//        self?.tableView.reloadData()
+//      }
+//    }))
+//
+//    present(alert, animated: true)
   }
 
   func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-    let todo = vm.todos[indexPath.row]
+    let folder = vm.folders[indexPath.row]
     let delete = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, completionHandler in
-      self?.vm.deleteTodo(todo: todo)
-      self?.vm.getTodos()
+      self?.vm.deleteFolder(folder: folder)
+      self?.vm.getFolders()
 
       DispatchQueue.main.async {
         self?.tableView.reloadData()

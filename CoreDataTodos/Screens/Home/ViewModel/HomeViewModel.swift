@@ -12,30 +12,30 @@ class HomeViewModel {
   // MARK: - Properties
 
   private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-  var todos: [Todo] = []
-  let cellIdentifier = "todoCell"
+  var folders: [Folder] = []
+  let cellIdentifier = "folderCell"
 
   // MARK: - Init
 
   init() {
-    getTodos()
+    getFolders()
   }
 
   // MARK: - Methods
 
-  func getTodos() {
+  func getFolders() {
     do {
-      todos = try context.fetch(Todo.fetchRequest())
+      folders = try context.fetch(Folder.fetchRequest())
     } catch let e {
       // error
       print(e)
     }
   }
 
-  func createTodo(with name: String) {
-    let newTodo = Todo(context: context)
-    newTodo.name = name
-    newTodo.createdAt = Date()
+  func createFolder(with name: String) {
+    let newFolder = Folder(context: context)
+    newFolder.name = name
+    newFolder.createdAt = Date()
 
     do {
       try context.save()
@@ -44,8 +44,8 @@ class HomeViewModel {
     }
   }
 
-  func deleteTodo(todo: Todo) {
-    context.delete(todo)
+  func deleteFolder(folder: Folder) {
+    context.delete(folder)
 
     do {
       try context.save()
@@ -54,8 +54,8 @@ class HomeViewModel {
     }
   }
 
-  func updateTodo(todo: Todo, with name: String) {
-    todo.name = name
+  func updateFolder(folder: Folder, with name: String) {
+    folder.name = name
 
     do {
       try context.save()
