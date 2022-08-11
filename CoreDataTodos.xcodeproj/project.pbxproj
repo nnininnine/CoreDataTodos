@@ -22,6 +22,7 @@
 		69EF953C28A3B17D007561B7 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953B28A3B17D007561B7 /* TodosViewController.swift */; };
 		69EF953F28A49F72007561B7 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953D28A49F72007561B7 /* Folder+CoreDataClass.swift */; };
 		69EF954028A49F72007561B7 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953E28A49F72007561B7 /* Folder+CoreDataProperties.swift */; };
+		69EF954328A4D258007561B7 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF954228A4D258007561B7 /* TodosViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		69EF953B28A3B17D007561B7 /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
 		69EF953D28A49F72007561B7 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
 		69EF953E28A49F72007561B7 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		69EF954228A4D258007561B7 /* TodosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 		69EF953928A3B152007561B7 /* Todos */ = {
 			isa = PBXGroup;
 			children = (
+				69EF954128A4D249007561B7 /* ViewModel */,
 				69EF953A28A3B161007561B7 /* View */,
 			);
 			path = Todos;
@@ -196,6 +199,14 @@
 				69EF953B28A3B17D007561B7 /* TodosViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		69EF954128A4D249007561B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				69EF954228A4D258007561B7 /* TodosViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 				69EF953F28A49F72007561B7 /* Folder+CoreDataClass.swift in Sources */,
 				69EF94F828A0E134007561B7 /* SceneDelegate.swift in Sources */,
 				69EF954028A49F72007561B7 /* Folder+CoreDataProperties.swift in Sources */,
+				69EF954328A4D258007561B7 /* TodosViewModel.swift in Sources */,
 				69EF953028A3AF89007561B7 /* Todo+CoreDataClass.swift in Sources */,
 				69EF952628A37878007561B7 /* User+CoreDataClass.swift in Sources */,
 				69EF952B28A378D6007561B7 /* LoginViewController.swift in Sources */,
