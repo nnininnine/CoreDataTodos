@@ -11,7 +11,7 @@ import UIKit
 class TodosViewModel {
   // MARK: - Properties
   
-  private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+  private var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
   var folder: Folder
   var todos: [Todo] = []
   let cellIdentifier = "todoCell"
@@ -20,6 +20,13 @@ class TodosViewModel {
   
   init(with folder: Folder) {
     self.folder = folder
+    
+    getTodos(by: self.folder)
+  }
+  
+  init(with folder: Folder, context: NSManagedObjectContext) {
+    self.folder = folder
+    self.context = context
     
     getTodos(by: self.folder)
   }
