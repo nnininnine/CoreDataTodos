@@ -11,15 +11,15 @@ import UIKit
 class HomeViewModel {
   // MARK: - Properties
 
-  private var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+  private let context: NSManagedObjectContext
   var folders: [Folder] = []
   let cellIdentifier = "folderCell"
 
   // MARK: - Init
 
-  init() {
-    getFolders()
-  }
+//  init() {
+//    getFolders()
+//  }
 
   init(with context: NSManagedObjectContext) {
     self.context = context

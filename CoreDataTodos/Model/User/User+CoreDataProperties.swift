@@ -2,25 +2,20 @@
 //  User+CoreDataProperties.swift
 //  CoreDataTodos
 //
-//  Created by 7Peaks on 10/8/2565 BE.
+//  Created by 7Peaks on 15/8/2565 BE.
 //
 //
 
-import Foundation
 import CoreData
+import Foundation
 
+public extension User {
+  @nonobjc class func fetchRequest() -> NSFetchRequest<User> {
+    return NSFetchRequest<User>(entityName: "User")
+  }
 
-extension User {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
-        return NSFetchRequest<User>(entityName: "User")
-    }
-
-    @NSManaged public var username: String?
-    @NSManaged public var id: UUID?
-
+  @NSManaged var id: UUID?
+  @NSManaged var username: String?
 }
 
-extension User : Identifiable {
-
-}
+extension User: Identifiable {}

@@ -15,8 +15,8 @@
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Todo" positionX="-63" positionY="-18" width="128" height="74"/>
-        <element name="User" positionX="-54" positionY="9" width="128" height="59"/>
-        <element name="Folder" positionX="-36" positionY="27" width="128" height="74"/>
+        <element name="Folder" positionX="-261.96875" positionY="-17.0546875" width="128" height="88"/>
+        <element name="Todo" positionX="-70.7109375" positionY="42.07421875" width="128" height="88"/>
+        <element name="User" positionX="-261.765625" positionY="-92.89453125" width="128" height="59"/>
     </elements>
 </model>

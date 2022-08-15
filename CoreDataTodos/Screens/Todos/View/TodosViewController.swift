@@ -23,7 +23,7 @@ class TodosViewController: UIViewController {
   // MARK: - Init
 
   init(with folder: Folder) {
-    self.vm = .init(with: folder)
+    self.vm = .init(with: folder, context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
 
     super.init(nibName: nil, bundle: nil)
   }

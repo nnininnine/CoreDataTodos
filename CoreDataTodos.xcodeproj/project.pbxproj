@@ -10,6 +10,21 @@
 		6967961828A9E9CE000D9436 /* CoreDataTodosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967961728A9E9CE000D9436 /* CoreDataTodosTests.swift */; };
 		6967961F28AA24FF000D9436 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967961E28AA24FF000D9436 /* TestCoreDataStack.swift */; };
 		6967962028AA266A000D9436 /* CoreDataTodos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69EF94FE28A0E134007561B7 /* CoreDataTodos.xcdatamodeld */; };
+		6967962128AA3E85000D9436 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF951A28A0E4A2007561B7 /* HomeViewModel.swift */; };
+		6967962228AA3E87000D9436 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF954228A4D258007561B7 /* TodosViewModel.swift */; };
+		6967962928AA4E54000D9436 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967961E28AA24FF000D9436 /* TestCoreDataStack.swift */; };
+		6967963028AA5126000D9436 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962A28AA5126000D9436 /* Todo+CoreDataClass.swift */; };
+		6967963128AA5126000D9436 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962A28AA5126000D9436 /* Todo+CoreDataClass.swift */; };
+		6967963228AA5126000D9436 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962B28AA5126000D9436 /* Todo+CoreDataProperties.swift */; };
+		6967963328AA5126000D9436 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962B28AA5126000D9436 /* Todo+CoreDataProperties.swift */; };
+		6967963428AA5126000D9436 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962C28AA5126000D9436 /* User+CoreDataClass.swift */; };
+		6967963528AA5126000D9436 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962C28AA5126000D9436 /* User+CoreDataClass.swift */; };
+		6967963628AA5126000D9436 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962D28AA5126000D9436 /* User+CoreDataProperties.swift */; };
+		6967963728AA5126000D9436 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962D28AA5126000D9436 /* User+CoreDataProperties.swift */; };
+		6967963828AA5126000D9436 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962E28AA5126000D9436 /* Folder+CoreDataClass.swift */; };
+		6967963928AA5126000D9436 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962E28AA5126000D9436 /* Folder+CoreDataClass.swift */; };
+		6967963A28AA5126000D9436 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962F28AA5126000D9436 /* Folder+CoreDataProperties.swift */; };
+		6967963B28AA5126000D9436 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967962F28AA5126000D9436 /* Folder+CoreDataProperties.swift */; };
 		69EF94F628A0E134007561B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF94F528A0E134007561B7 /* AppDelegate.swift */; };
 		69EF94F828A0E134007561B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF94F728A0E134007561B7 /* SceneDelegate.swift */; };
 		69EF950028A0E134007561B7 /* CoreDataTodos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69EF94FE28A0E134007561B7 /* CoreDataTodos.xcdatamodeld */; };
@@ -17,14 +32,8 @@
 		69EF950528A0E135007561B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EF950328A0E135007561B7 /* LaunchScreen.storyboard */; };
 		69EF951B28A0E4A2007561B7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF951A28A0E4A2007561B7 /* HomeViewModel.swift */; };
 		69EF951D28A0E4B6007561B7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF951C28A0E4B6007561B7 /* HomeViewController.swift */; };
-		69EF952628A37878007561B7 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952428A37878007561B7 /* User+CoreDataClass.swift */; };
-		69EF952728A37878007561B7 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952528A37878007561B7 /* User+CoreDataProperties.swift */; };
 		69EF952B28A378D6007561B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952A28A378D6007561B7 /* LoginViewController.swift */; };
-		69EF953028A3AF89007561B7 /* Todo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952C28A3AF89007561B7 /* Todo+CoreDataClass.swift */; };
-		69EF953128A3AF89007561B7 /* Todo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF952D28A3AF89007561B7 /* Todo+CoreDataProperties.swift */; };
 		69EF953C28A3B17D007561B7 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953B28A3B17D007561B7 /* TodosViewController.swift */; };
-		69EF953F28A49F72007561B7 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953D28A49F72007561B7 /* Folder+CoreDataClass.swift */; };
-		69EF954028A49F72007561B7 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF953E28A49F72007561B7 /* Folder+CoreDataProperties.swift */; };
 		69EF954328A4D258007561B7 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF954228A4D258007561B7 /* TodosViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +51,12 @@
 		6967961528A9E9CE000D9436 /* CoreDataTodosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataTodosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6967961728A9E9CE000D9436 /* CoreDataTodosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTodosTests.swift; sourceTree = "<group>"; };
 		6967961E28AA24FF000D9436 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		6967962A28AA5126000D9436 /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6967962B28AA5126000D9436 /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6967962C28AA5126000D9436 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6967962D28AA5126000D9436 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6967962E28AA5126000D9436 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6967962F28AA5126000D9436 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		69EF94F228A0E134007561B7 /* CoreDataTodos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTodos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EF94F528A0E134007561B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69EF94F728A0E134007561B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,14 +66,8 @@
 		69EF950628A0E135007561B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69EF951A28A0E4A2007561B7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		69EF951C28A0E4B6007561B7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		69EF952428A37878007561B7 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		69EF952528A37878007561B7 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		69EF952A28A378D6007561B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		69EF952C28A3AF89007561B7 /* Todo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataClass.swift"; sourceTree = "<group>"; };
-		69EF952D28A3AF89007561B7 /* Todo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		69EF953B28A3B17D007561B7 /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
-		69EF953D28A49F72007561B7 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
-		69EF953E28A49F72007561B7 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		69EF954228A4D258007561B7 /* TodosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,8 +143,8 @@
 		69EF950D28A0E1D9007561B7 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
-				69EF952C28A3AF89007561B7 /* Todo+CoreDataClass.swift */,
-				69EF952D28A3AF89007561B7 /* Todo+CoreDataProperties.swift */,
+				6967962A28AA5126000D9436 /* Todo+CoreDataClass.swift */,
+				6967962B28AA5126000D9436 /* Todo+CoreDataProperties.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -187,8 +196,8 @@
 		69EF952328A37833007561B7 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				69EF952428A37878007561B7 /* User+CoreDataClass.swift */,
-				69EF952528A37878007561B7 /* User+CoreDataProperties.swift */,
+				6967962C28AA5126000D9436 /* User+CoreDataClass.swift */,
+				6967962D28AA5126000D9436 /* User+CoreDataProperties.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -212,8 +221,8 @@
 		69EF953828A3AFED007561B7 /* Folder */ = {
 			isa = PBXGroup;
 			children = (
-				69EF953D28A49F72007561B7 /* Folder+CoreDataClass.swift */,
-				69EF953E28A49F72007561B7 /* Folder+CoreDataProperties.swift */,
+				6967962E28AA5126000D9436 /* Folder+CoreDataClass.swift */,
+				6967962F28AA5126000D9436 /* Folder+CoreDataProperties.swift */,
 			);
 			path = Folder;
 			sourceTree = "<group>";
@@ -344,8 +353,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6967961828A9E9CE000D9436 /* CoreDataTodosTests.swift in Sources */,
+				6967963B28AA5126000D9436 /* Folder+CoreDataProperties.swift in Sources */,
+				6967962228AA3E87000D9436 /* TodosViewModel.swift in Sources */,
 				6967962028AA266A000D9436 /* CoreDataTodos.xcdatamodeld in Sources */,
+				6967963928AA5126000D9436 /* Folder+CoreDataClass.swift in Sources */,
+				6967963128AA5126000D9436 /* Todo+CoreDataClass.swift in Sources */,
+				6967963528AA5126000D9436 /* User+CoreDataClass.swift in Sources */,
 				6967961F28AA24FF000D9436 /* TestCoreDataStack.swift in Sources */,
+				6967963728AA5126000D9436 /* User+CoreDataProperties.swift in Sources */,
+				6967963328AA5126000D9436 /* Todo+CoreDataProperties.swift in Sources */,
+				6967962128AA3E85000D9436 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,19 +371,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				69EF94F628A0E134007561B7 /* AppDelegate.swift in Sources */,
+				6967963A28AA5126000D9436 /* Folder+CoreDataProperties.swift in Sources */,
 				69EF951B28A0E4A2007561B7 /* HomeViewModel.swift in Sources */,
 				69EF951D28A0E4B6007561B7 /* HomeViewController.swift in Sources */,
 				69EF950028A0E134007561B7 /* CoreDataTodos.xcdatamodeld in Sources */,
 				69EF953C28A3B17D007561B7 /* TodosViewController.swift in Sources */,
-				69EF953F28A49F72007561B7 /* Folder+CoreDataClass.swift in Sources */,
+				6967963228AA5126000D9436 /* Todo+CoreDataProperties.swift in Sources */,
 				69EF94F828A0E134007561B7 /* SceneDelegate.swift in Sources */,
-				69EF954028A49F72007561B7 /* Folder+CoreDataProperties.swift in Sources */,
 				69EF954328A4D258007561B7 /* TodosViewModel.swift in Sources */,
-				69EF953028A3AF89007561B7 /* Todo+CoreDataClass.swift in Sources */,
-				69EF952628A37878007561B7 /* User+CoreDataClass.swift in Sources */,
+				6967963628AA5126000D9436 /* User+CoreDataProperties.swift in Sources */,
+				6967962928AA4E54000D9436 /* TestCoreDataStack.swift in Sources */,
 				69EF952B28A378D6007561B7 /* LoginViewController.swift in Sources */,
-				69EF952728A37878007561B7 /* User+CoreDataProperties.swift in Sources */,
-				69EF953128A3AF89007561B7 /* Todo+CoreDataProperties.swift in Sources */,
+				6967963428AA5126000D9436 /* User+CoreDataClass.swift in Sources */,
+				6967963028AA5126000D9436 /* Todo+CoreDataClass.swift in Sources */,
+				6967963828AA5126000D9436 /* Folder+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

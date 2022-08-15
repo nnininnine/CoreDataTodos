@@ -11,18 +11,18 @@ import UIKit
 class TodosViewModel {
   // MARK: - Properties
   
-  private var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+  private let context: NSManagedObjectContext
   var folder: Folder
   var todos: [Todo] = []
   let cellIdentifier = "todoCell"
   
   // MARK: - Init
   
-  init(with folder: Folder) {
-    self.folder = folder
-    
-    getTodos(by: self.folder)
-  }
+//  init(with folder: Folder) {
+//    self.folder = folder
+//
+//    getTodos(by: self.folder)
+//  }
   
   init(with folder: Folder, context: NSManagedObjectContext) {
     self.folder = folder

@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
   // MARK: - Properties
 
-  private let vm: HomeViewModel = .init()
+  private let vm: HomeViewModel = .init(with: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
 
   // MARK: - Subviews
 
@@ -100,7 +100,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let folder = vm.folders[indexPath.row]
     let todosVC = TodosViewController(with: folder)
-    
+
     navigationItem.backButtonTitle = "Back"
     navigationController?.pushViewController(todosVC, animated: true)
 
