@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6967961828A9E9CE000D9436 /* CoreDataTodosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967961728A9E9CE000D9436 /* CoreDataTodosTests.swift */; };
+		6967961F28AA24FF000D9436 /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967961E28AA24FF000D9436 /* TestCoreDataStack.swift */; };
+		6967962028AA266A000D9436 /* CoreDataTodos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69EF94FE28A0E134007561B7 /* CoreDataTodos.xcdatamodeld */; };
 		69EF94F628A0E134007561B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF94F528A0E134007561B7 /* AppDelegate.swift */; };
 		69EF94F828A0E134007561B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EF94F728A0E134007561B7 /* SceneDelegate.swift */; };
 		69EF950028A0E134007561B7 /* CoreDataTodos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69EF94FE28A0E134007561B7 /* CoreDataTodos.xcdatamodeld */; };
@@ -39,6 +41,7 @@
 /* Begin PBXFileReference section */
 		6967961528A9E9CE000D9436 /* CoreDataTodosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataTodosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6967961728A9E9CE000D9436 /* CoreDataTodosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTodosTests.swift; sourceTree = "<group>"; };
+		6967961E28AA24FF000D9436 /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		69EF94F228A0E134007561B7 /* CoreDataTodos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTodos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EF94F528A0E134007561B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69EF94F728A0E134007561B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				6967961728A9E9CE000D9436 /* CoreDataTodosTests.swift */,
+				6967961E28AA24FF000D9436 /* TestCoreDataStack.swift */,
 			);
 			path = CoreDataTodosTests;
 			sourceTree = "<group>";
@@ -340,6 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6967961828A9E9CE000D9436 /* CoreDataTodosTests.swift in Sources */,
+				6967962028AA266A000D9436 /* CoreDataTodos.xcdatamodeld in Sources */,
+				6967961F28AA24FF000D9436 /* TestCoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
