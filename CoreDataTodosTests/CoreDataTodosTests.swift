@@ -61,4 +61,12 @@ class CoreDataTodosTests: XCTestCase {
 
     XCTAssertFalse(vm.folders.contains(where: { $0.name == folderName }))
   }
+
+  // MARK: - TodosViewModel unit test
+
+  func testCreateTodo() throws {}
+
+  func testUpdateTodo() throws {}
+
+  func testDeleteTodo() throws {}
 }
