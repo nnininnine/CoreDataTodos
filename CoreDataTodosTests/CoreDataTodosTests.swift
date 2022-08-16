@@ -64,7 +64,33 @@ class CoreDataTodosTests: XCTestCase {
 
   // MARK: - TodosViewModel unit test
 
-  func testCreateTodo() throws {}
+  func testCreateTodo() throws {
+    // create context
+    let context = TestCoreDataStack.shared.persistentContainer.viewContext
+
+    // declare home view model
+    let homeVM: CoreDataTodos.HomeViewModel = .init(with: context)
+
+    // create folder
+    let folderName = "Folder"
+
+    homeVM.createFolder(with: folderName)
+    homeVM.getFolders()
+
+    XCTAssertNotNil(homeVM.folders.first(where: { $0.name == folderName }))
+    let folder = homeVM.folders.first(where: { $0.name == folderName })!
+
+    // declare todos view model
+    let todosVM: CoreDataTodos.TodosViewModel = .init(with: folder, context: context)
+    
+    // create todo
+    let todoName: String = "some todo for test"
+    
+    todosVM.createTodo(with: todoName)
+    todosVM.getTodos(by: folder)
+    
+    XCTAssertTrue(todosVM.todos.contains(where: { $0.name == todoName }))
+  }
 
   func testUpdateTodo() throws {}
 
