@@ -111,24 +111,25 @@ extension TodosViewController: UITableViewDelegate, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    let folder = vm.folders[indexPath.row]
-//    let alert = UIAlertController(title: "Edit Folder", message: "Edit selected folder", preferredStyle: .alert)
-//    alert.addTextField(configurationHandler: { textField in
-//      textField.text = folder.name
-//    })
-//    alert.addAction(.init(title: "Cancel", style: .cancel))
-//    alert.addAction(.init(title: "Update", style: .default, handler: { [weak self] _ in
-//      guard let textField = alert.textFields?.first, let text = textField.text, !text.isEmpty else { return }
-//
-//      self?.vm.updateFolder(folder: folder, with: text)
-//      self?.vm.getFolders()
-//
-//      DispatchQueue.main.async {
-//        self?.tableView.reloadData()
-//      }
-//    }))
-//
-//    present(alert, animated: true)
+    let todo = vm.todos[indexPath.row]
+    let alert = UIAlertController(title: "Edit Todo", message: "Edit selected todo", preferredStyle: .alert)
+    alert.addTextField(configurationHandler: { textField in
+      textField.text = todo.name
+    })
+    alert.addAction(.init(title: "Cancel", style: .cancel))
+    alert.addAction(.init(title: "Update", style: .default, handler: { [weak self] _ in
+      guard let textField = alert.textFields?.first, let text = textField.text, !text.isEmpty else { return }
+      guard let self = self else { return }
+
+      self.vm.updateTodo(todo: todo, with: text)
+      self.vm.getTodos(by: self.vm.folder)
+
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
+    }))
+
+    present(alert, animated: true)
   }
 
 //  func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
