@@ -103,25 +103,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     navigationItem.backButtonTitle = "Back"
     navigationController?.pushViewController(todosVC, animated: true)
-
-//    let folder = vm.folders[indexPath.row]
-//    let alert = UIAlertController(title: "Edit Folder", message: "Edit selected folder", preferredStyle: .alert)
-//    alert.addTextField(configurationHandler: { textField in
-//      textField.text = folder.name
-//    })
-//    alert.addAction(.init(title: "Cancel", style: .cancel))
-//    alert.addAction(.init(title: "Update", style: .default, handler: { [weak self] _ in
-//      guard let textField = alert.textFields?.first, let text = textField.text, !text.isEmpty else { return }
-//
-//      self?.vm.updateFolder(folder: folder, with: text)
-//      self?.vm.getFolders()
-//
-//      DispatchQueue.main.async {
-//        self?.tableView.reloadData()
-//      }
-//    }))
-//
-//    present(alert, animated: true)
   }
 
   func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -135,10 +116,32 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
       }
       completionHandler(true)
     }
-
     delete.backgroundColor = .red
 
-    let configuration = UISwipeActionsConfiguration(actions: [delete])
+    let update = UIContextualAction(style: .normal, title: "Update") { [weak self] _, _, completionHandler in
+      let alert = UIAlertController(title: "Edit Folder", message: "Edit selected folder", preferredStyle: .alert)
+      alert.addTextField(configurationHandler: { textField in
+        textField.text = folder.name
+      })
+      alert.addAction(.init(title: "Cancel", style: .cancel))
+      alert.addAction(.init(title: "Update", style: .default, handler: { [weak self] _ in
+        guard let textField = alert.textFields?.first, let text = textField.text, !text.isEmpty else { return }
+
+        self?.vm.updateFolder(folder: folder, with: text)
+        self?.vm.getFolders()
+
+        DispatchQueue.main.async {
+          self?.tableView.reloadData()
+        }
+      }))
+
+      self?.present(alert, animated: true)
+
+      completionHandler(true)
+    }
+    update.backgroundColor = .systemYellow
+
+    let configuration = UISwipeActionsConfiguration(actions: [delete, update])
 
     return configuration
   }
