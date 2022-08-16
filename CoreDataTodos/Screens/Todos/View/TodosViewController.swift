@@ -132,22 +132,23 @@ extension TodosViewController: UITableViewDelegate, UITableViewDataSource {
     present(alert, animated: true)
   }
 
-//  func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//    let folder = vm.folders[indexPath.row]
-//    let delete = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, completionHandler in
-//      self?.vm.deleteFolder(folder: folder)
-//      self?.vm.getFolders()
-//
-//      DispatchQueue.main.async {
-//        self?.tableView.reloadData()
-//      }
-//      completionHandler(true)
-//    }
-//
-//    delete.backgroundColor = .red
-//
-//    let configuration = UISwipeActionsConfiguration(actions: [delete])
-//
-//    return configuration
-//  }
+  func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let todo = vm.todos[indexPath.row]
+    let delete = UIContextualAction(style: .destructive, title: "Delete") { [weak self] _, _, completionHandler in
+      guard let self = self else { return }
+      self.vm.deleteTodo(todo: todo)
+      self.vm.getTodos(by: self.vm.folder)
+
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
+      completionHandler(true)
+    }
+
+    delete.backgroundColor = .red
+
+    let configuration = UISwipeActionsConfiguration(actions: [delete])
+
+    return configuration
+  }
 }
