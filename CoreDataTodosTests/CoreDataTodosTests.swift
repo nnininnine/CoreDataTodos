@@ -26,4 +26,22 @@ class CoreDataTodosTests: XCTestCase {
     vm.getFolders()
     XCTAssertTrue(vm.folders.contains(where: { $0.name == folderName }))
   }
+
+  func testUpdateFolder() throws {
+    let context = TestCoreDataStack.shared.persistentContainer.viewContext
+    let vm: CoreDataTodos.HomeViewModel = .init(with: context)
+    let folderName = "Folder"
+    let updatedName = "New Folder"
+
+    vm.createFolder(with: folderName)
+    vm.getFolders()
+
+    XCTAssertNotNil(vm.folders.first(where: { $0.name == folderName }))
+    let folder = vm.folders.first(where: { $0.name == folderName })!
+
+    vm.updateFolder(folder: folder, with: updatedName)
+    vm.getFolders()
+
+    XCTAssertTrue(vm.folders.contains(where: { $0.name == updatedName }))
+  }
 }
